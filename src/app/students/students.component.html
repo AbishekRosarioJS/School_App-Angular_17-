@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+<main role="main" class="container mt-5">
+  <div class="container">
+    <div class="text-center mt-5">
+      <!-- <h3>Dashboard page</h3>
+        <p class="text-bold "
+          [innerHTML]="'Hi '+this.user.dissplayName +', your Firebase ID is %localID% '+this.user.localId "></p> -->
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <div class="card flex justify-content-center">
+            <p-card header="Primary School">
+              <app-primaryschool-students></app-primaryschool-students>
+            </p-card>
+        </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card flex justify-content-center">
+            <p-card header="Middle School">
+             <app-middleschool-students></app-middleschool-students>
+            </p-card>
+        </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <div class="card flex justify-content-center">
+            <p-card header="High School">
+              <app-highschool-students></app-highschool-students>
+            </p-card>
+        </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card flex justify-content-center">
+            <p-card header="Higher Secondary School">
+             <app-highersecschool-students></app-highersecschool-students>
+            </p-card>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

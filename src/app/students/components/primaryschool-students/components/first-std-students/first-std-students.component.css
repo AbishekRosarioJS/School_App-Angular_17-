@@ -1,0 +1,12 @@
+.custom-card {
+  height: 620px;
+  width: 100%;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
