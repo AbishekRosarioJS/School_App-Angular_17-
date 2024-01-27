@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TeachersComponent } from './teachers.component';
 
 
+
 const routes: Routes = [
  {
   path:"",
@@ -13,6 +14,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
-  schemas:[CUSTOM_ELEMENTS_SCHEMA]
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
 })
 export class TeachersRoutingModule { }

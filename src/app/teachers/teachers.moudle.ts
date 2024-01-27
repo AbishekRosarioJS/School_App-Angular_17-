@@ -11,6 +11,7 @@ import { TableModule } from 'primeng/table';
 import { PaginatorModule } from 'primeng/paginator';
 import { TeachersRoutingModule } from './teachers.routing.module';
 import { HighschoolTeachersComponent } from './components/highschool-teachers/highschool-teachers.component';
+import { FirtsStdTeachersComponent } from './components/primaryschool-teachers/components/firts-std-teachers/firts-std-teachers.component';
 // import { NavbarComponent } from './components/navbar/navbar.component';
 @NgModule({
     declarations: [
@@ -19,6 +20,7 @@ import { HighschoolTeachersComponent } from './components/highschool-teachers/hi
         HighschoolTeachersComponent,
         MiddleschoolTeachersComponent,
         PrimaryschoolTeachersComponent,
+        FirtsStdTeachersComponent
     ],
     imports: [
         CommonModule,
