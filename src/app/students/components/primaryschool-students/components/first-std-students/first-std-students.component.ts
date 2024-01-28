@@ -15,6 +15,7 @@ export class FirstStdStudentsComponent {
   rowsPerPageOptions: number[] = [5, 10, 20];
   currentPage: number = 1;
   rowsPerPage: number = 10;
+  newUser: any = { first_name: '', last_name: '', class: '', sec: '', age: '', location: '' };
 
   constructor(private schoolService: SchoolService) {
     this.APIBaseLink = this.schoolService.baseLink;
@@ -24,6 +25,22 @@ export class FirstStdStudentsComponent {
     this.onGetStudentList();
   }
 
+  addEmptyRow() {
+    const emptyUser = {
+      editMode: true, 
+      first_name: '',
+      last_name: '',
+      class: '',
+      sec: '',
+      age: '',
+      location: ''
+    };
+    console.log(emptyUser)
+    this.users.push(emptyUser);
+    this.createUser(emptyUser);
+    this.updatePagedUsers();
+  }
+
   onGetStudentList() {
     const UrlLink: any = `${this.APIBaseLink}api/user/list`;
     this.schoolService.onGetMethodSync(UrlLink).subscribe((data: any) => {
@@ -31,6 +48,15 @@ export class FirstStdStudentsComponent {
       this.users = data;
       this.totalRecords = data.length;
       this.updatePagedUsers();
+    });
+  }
+
+  createUser(user: any) {
+    const createUserUrl: string = `${this.APIBaseLink}api/user/create`;
+    this.schoolService.onPostMethodSync(createUserUrl, user).subscribe((response: any) => {
+      // console.log(response);
+      // this.newUser = { first_name: '', last_name: '', class: '', sec: '', age: '', location: '' };
+      // this.onGetStudentList();
     });
   }
 

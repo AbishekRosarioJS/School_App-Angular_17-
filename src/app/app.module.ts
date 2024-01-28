@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
 import { SchoolService } from './services/school.service';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -17,8 +19,11 @@ import { SchoolService } from './services/school.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
+    
   ],
-  providers: [AuthService,SchoolService],
+  providers: [AuthService,SchoolService,ToastrService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

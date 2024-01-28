@@ -1,88 +1,15 @@
 <div class="container-fluid">
   <div class="row">
-    <!-- <div class="col-md-4 no-padding">
-      <div class="card custom-card">
-        <div class="card-body card-content">
-          <h5 class="card-title">Students Name - List</h5>
-          <ul class="list-unstyled">
-            <li *ngFor="let user of users; let i = index">
-              {{ i + 1 }}. {{ user.first_name }} {{ user.last_name }}
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div> -->
-    <!-- <div class="col-md-12 no-padding">
-      <div class="card custom-card">
-        <div class="card-body card-content">
-          <h5 class="card-title">Students Details</h5>
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Select</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">Class</th>
-                <th scope="col">Sec</th>
-                <th scope="col">Age</th>
-                <th scope="col">Location</th>
-                <th scope="col" *ngIf="showActionsColumn">Actions</th>  
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let user of users">
-                <td>
-                  <input type="checkbox" [(ngModel)]="user.editMode" (change)="onCheckboxChange(user)">
-                </td>
-                <td>
-                  <ng-container *ngIf="user.editMode">
-                    <input type="text" [(ngModel)]="user.first_name">
-                  </ng-container>
-                  <ng-container *ngIf="!user.editMode">{{ user.first_name }}</ng-container>
-                </td>
-                <td>
-                  <ng-container *ngIf="user.editMode">
-                    <input type="text" [(ngModel)]="user.last_name">
-                  </ng-container>
-                  <ng-container *ngIf="!user.editMode">{{ user.last_name }}</ng-container>
-                </td>
-                <td>
-                  <ng-container *ngIf="user.editMode">
-                    <input type="text" [(ngModel)]="user.class">
-                  </ng-container>
-                  <ng-container *ngIf="!user.editMode">{{ user.class }}</ng-container>
-                </td>
-                <td>
-                  <ng-container *ngIf="user.editMode">
-                    <input type="text" [(ngModel)]="user.sec">
-                  </ng-container>
-                  <ng-container *ngIf="!user.editMode">{{ user.sec }}</ng-container>
-                </td>
-                <td>
-                  <ng-container *ngIf="user.editMode">
-                    <input type="text" [(ngModel)]="user.age">
-                  </ng-container>
-                  <ng-container *ngIf="!user.editMode">{{ user.age }}</ng-container>
-                </td>
-                <td>
-                  <ng-container *ngIf="user.editMode">
-                    <input type="text" [(ngModel)]="user.location">
-                  </ng-container>
-                  <ng-container *ngIf="!user.editMode">{{ user.location }}</ng-container>
-                </td>
-                <td *ngIf="showActionsColumn">
-                  <button class="btn btn-danger btn-sm" *ngIf="user.editMode" (click)="onDelete(user)">Delete</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div> -->
     <div class="col-md-12 no-padding" >
       <div class="card custom-card">
         <div class="card-body card-content">
           <h5 class="card-title">Students Details</h5>
+          <!-- <button class="btn btn-primary btn-sm mb-2"  style="margin-left: 92%;" (click)="addEmptyRow()">
+            <i class="fa fa-plus"></i> Add Student
+          </button> -->
+          <button class="btn btn-primary btn-sm mb-2"  style="margin-left: 92%;" routerLink="/first-std-teachers">
+            <i class="fa fa-plus"></i> Add Student
+          </button>
           <table class="table">
             <thead>
               <tr>
